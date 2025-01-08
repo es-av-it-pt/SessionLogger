@@ -1,5 +1,6 @@
 package com.it2s.locationtracker.core.di
 
+import com.it2s.locationtracker.data.dataSource.CustomDataApiService
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import dagger.Module
 import dagger.Provides
@@ -33,5 +34,10 @@ class NetworkModule {
             .addConverterFactory(networkJson.asConverterFactory("application/json".toMediaType()))
             .build()
     }
+
+    @Provides
+    @Singleton
+    fun provideCustomDataApiService(retrofit: Retrofit): CustomDataApiService =
+        retrofit.create(CustomDataApiService::class.java)
 
 }
