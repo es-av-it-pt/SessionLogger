@@ -8,5 +8,5 @@ data class SendEventRequestDto(
     val collectionNumber:Int,
     val label:String,
     val status:String,
-    val timer:Long = 0,
+    val timer:Long,
 )
