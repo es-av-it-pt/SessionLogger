@@ -28,6 +28,7 @@ import androidx.compose.material3.FabPosition
 import androidx.compose.material3.FilledIconButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -239,7 +240,7 @@ fun CustomScanPage(modifier: Modifier = Modifier, viewModel: CustomDataViewModel
                             viewModel.sendEvent(Event.CHANGE)
                         }
                     }, Modifier.scale(2f), thumbContent = {
-                        Text(if (isInBus) "IN" else "OUT", Modifier/*.rotate(90f)*/)
+                        Text(if (isInBus) "IN" else "OUT", Modifier/*.rotate(90f)*/, style = MaterialTheme.typography.labelSmall)
 
                     })
                     Spacer(Modifier.height(16.dp))
