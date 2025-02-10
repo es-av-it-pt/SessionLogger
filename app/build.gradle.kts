@@ -2,8 +2,9 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.dagger.hilt)
-    id("kotlin-kapt")
+
     alias(libs.plugins.serialization)
+    alias(libs.plugins.ksp)
 }
 
 android {
@@ -52,10 +53,7 @@ android {
     }
 }
 
-// Allow references to generated code
-kapt {
-    correctErrorTypes = true
-}
+
 
 dependencies {
 
@@ -82,7 +80,8 @@ dependencies {
 
     //hilt
     implementation(libs.hilt)
-    kapt(libs.hilt.compiler)
+
+    ksp(libs.hilt.android.compiler)
 
     // Coroutines
     implementation(libs.coroutines.core)
@@ -95,4 +94,9 @@ dependencies {
     implementation(libs.okhttp.logging)
 
     implementation(libs.timber)
+}
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
 }

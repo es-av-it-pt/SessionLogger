@@ -9,14 +9,14 @@ import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 
 class GetScanModeUseCase : BaseUseCase<List<ScanModeEntity>, Unit> {
-    override operator fun invoke(params: Unit): Flow<NetworkResult<List<ScanModeEntity>>> =
+    override operator fun invoke(param: Unit): Flow<NetworkResult<List<ScanModeEntity>>> =
         flow {
             emit(
                 NetworkResult.Success(
-                    listOf(
-                        ScanModeEntity("Static", 100),
-                        ScanModeEntity("Dynamic", 200)
-                    )
+                        listOf(
+                            ScanModeEntity("Static", 100),
+                            ScanModeEntity("Dynamic", 200)
+                        )
                 )
             )
         }.flowOn(Dispatchers.IO)

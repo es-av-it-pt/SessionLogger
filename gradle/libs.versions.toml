@@ -1,13 +1,13 @@
 [versions]
-agp = "8.6.0"
+agp = "8.8.0"
 kotlin = "1.9.0"
 coreKtx = "1.15.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.7"
-activityCompose = "1.9.3"
-composeBom = "2024.04.01"
+activityCompose = "1.10.0"
+composeBom = "2025.01.01"
 
 hilt = "2.51.1"
 coroutines = "1.7.3"
@@ -19,6 +19,8 @@ kotlinxSerialization = "1.6.0"
 timberVersion = "4.7.1"
 
 lifecycleCompose = "2.8.7"
+
+ksp = "1.9.0-1.0.13"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -45,7 +47,7 @@ kotlinx-serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-
 
 #hilt
 hilt = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
-hilt-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
+hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
 
 #coroutines
 coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
@@ -64,5 +66,6 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+ksp = {id = "com.google.devtools.ksp", version.ref = "ksp"}
 
 

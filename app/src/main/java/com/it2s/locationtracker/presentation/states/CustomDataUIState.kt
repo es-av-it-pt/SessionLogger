@@ -19,7 +19,7 @@ data class CustomDataUIState(
     val trackTimer: Long = System.currentTimeMillis()
 ) {
 
-    val url: String
+    private val url: String
         get() {
             return if (port.isEmpty())
                 address
