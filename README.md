@@ -1,1 +1,1 @@
-# Location tracker
+# SessionLogger
