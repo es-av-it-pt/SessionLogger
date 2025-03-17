@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Location Tracker</string>
+    <string name="app_name">SessionLogger</string>
 
     <string name="address_label">URL</string>
     <string name="port_label">Port</string>
