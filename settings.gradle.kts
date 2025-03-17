@@ -22,6 +22,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Location Tracker"
+rootProject.name = "SessionLogger"
 include(":app")
- 
